@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatives Designtool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <img src="shapes/DBD%20Logo-02.png">
+            <h1>DBD Visual generator</h1>
+            <div id="oben"> 
+                <label for="format">Wähle ein Format:</label>
+                <select id="format">
+                    <option value="1350x1350">Quadrat</option>
+                    <option value="1080x1920">Story</option>
+                    <option value="1200x627">LinkedIn</option>
+                </select>
+                <label for="repeats">Wiederholung <span id="repeatValue">1</span></label>
+                <input type="range" id="repeats" name="repeats" min="1" max="10" value="1">
+                <label for="sizeVariance">Größenvarianz <span id="sizeVarianceValue">1</span></label>
+                <input type="range" id="sizeVariance" name="sizeVariance" min="0.5" max="2" step="0.1" value="1">
+            </div>
+            <button id="generate">Generieren</button>
+            <button id="download">Download PNG</button>
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
